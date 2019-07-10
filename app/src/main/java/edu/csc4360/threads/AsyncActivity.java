@@ -24,6 +24,11 @@ public class AsyncActivity extends AppCompatActivity {
 
 
     private boolean downloadUrl(String url){
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return true;
     }
 

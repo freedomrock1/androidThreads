@@ -9,8 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AsyncActivity"
-            android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".TimerActivity"></activity>
+        <activity android:name=".Looper2Activity" />
+        <activity
+            android:name=".LooperActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".AsyncActivity"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".FibonacciBackground"
             android:parentActivityName=".MainActivity" />

@@ -31,4 +31,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void onClickLooper(View view){
+        Intent intent;
+        intent = new Intent(MainActivity.this, Looper2Activity.class );
+        startActivity(intent);
+    }
+
 }
