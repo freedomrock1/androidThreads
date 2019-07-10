@@ -36,5 +36,10 @@ public class MainActivity extends AppCompatActivity {
         intent = new Intent(MainActivity.this, Looper2Activity.class );
         startActivity(intent);
     }
+    public void onClickTimer(View view){
+        Intent intent;
+        intent = new Intent(MainActivity.this, TimerActivity.class );
+        startActivity(intent);
+    }
 
 }
