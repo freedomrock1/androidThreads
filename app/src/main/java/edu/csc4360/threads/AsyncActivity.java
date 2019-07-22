@@ -60,7 +60,7 @@ public class AsyncActivity extends AppCompatActivity {
     public void onClick(View view){
 
         DownloadUrlsTask task = new DownloadUrlsTask();
-        task.execute("http://google.com/", "http://wikipedia.org/", "http://mit.edu/");
+        task.execute("http://google.com/", "http://wikipedia.org/", "http://mit.edu/", "hello");
 
     }
 

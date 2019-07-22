@@ -1,5 +1,6 @@
 package edu.csc4360.threads;
 
+import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -72,6 +73,17 @@ public class TimerActivity extends AppCompatActivity {
 
         // Instantiate default Handler so Runnables can be posted to UI message queue
         mHandler = new Handler();
+    }
+    @Override
+    protected void onStop() {
+        super.onStop();
+
+        // Start the service if the timer is running
+        if (mTimerModel.isRunning()) {
+            Intent intent = new Intent(this, TimerIntentService.class);
+            intent.putExtra(TimerIntentService.EXTRA_MILLIS_LEFT, mTimerModel.getRemainingMilliseconds());
+            startService(intent);
+        }
     }
 
     public void startButtonClick(View view) {
